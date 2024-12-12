@@ -22,32 +22,45 @@ public class Main {
             Scanner SC = new Scanner(System.in);
             int choice;
             choice = SC.nextInt();
-            switch (choice){
-                case 1:
-                    addition(saisir(),saisir());
-                    break;
-                case 2:
-                    soustraction(saisir(),saisir());
-                    break;
-                case 3:
-                    Multiplication(saisir(),saisir());
-                    break;
-                case 4:
-                    Division(saisir(),saisir());
-                     break;
-                case 5 :
-                    Puissance(saisir(),saisir());
-                    break;
-                case 6 :
-                    Racine_carrée(saisir());
-                    break;
-                case 7 :
-                      Factorielle(saisir());
-                case 8 :
-                    return;
-                default:
-                    throw new IllegalStateException("Unexpected value: " + choice);
+
+            if (choice == 8) {
+                System.out.println("Exiting the program. goodbye!");
+                break;
             }
+
+            if (choice < 1 || choice > 7) {
+                System.out.println("Selection not available. Please choose a valid option.");
+                continue;
+            }
+
+
+
+
+        switch (choice) {
+            case 1:
+                addition(saisir(), saisir());
+                break;
+            case 2:
+                soustraction(saisir(), saisir());
+                break;
+            case 3:
+                Multiplication(saisir(), saisir());
+                break;
+            case 4:
+                Division(saisir(), saisir());
+                break;
+            case 5:
+                Puissance(saisir(), saisir());
+                break;
+            case 6:
+                Racine_carrée(saisir());
+                break;
+            case 7:
+                Factorielle(saisir());
+                break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + choice);
+        }
 
 
         }
@@ -82,15 +95,15 @@ public class Main {
         System.out.println("Racine_carrée : "+ Math.sqrt(a));
     }
     public static void Factorielle(double a ){
-         int fact = 1;
-         if (a==1 || a==0) {
-             fact = 1;
-         }
-         else {
-             for (int i = 2 ; i<=a;i++){
-                 fact = fact * i;
-             }
-         }
+        int fact = 1;
+        if (a==1 || a==0) {
+            fact = 1;
+        }
+        else {
+            for (int i = 2 ; i<=a;i++){
+                fact = fact * i;
+            }
+        }
 
 
         System.out.println("Factorielle : "+fact);
