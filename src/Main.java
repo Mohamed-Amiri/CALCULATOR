@@ -58,8 +58,7 @@ public class Main {
             case 7:
                 Factorielle(saisir());
                 break;
-            default:
-                throw new IllegalStateException("Unexpected value: " + choice);
+           
         }
 
 
